@@ -84,6 +84,19 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "dienepapeousmane:db:create": [
+            "@php bin/console doctrine:database:drop --force --if-exists",
+            "@php bin/console doctrine:database:create"
+        ],
+        "dienepapeousmane:cache:clear": "@php bin/console cache:clear",
+        "dienepapeousmane:make:entity": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php bin/console make:entity"
+        ],
+        "dienepapeousmane:migration": [
+            "@php bin/console make:migration --no-interaction",
+            "@php bin/console doctrine:migrations:migrate --no-interaction"
         ]
     },
     "conflict": {
