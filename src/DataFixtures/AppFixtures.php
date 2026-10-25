@@ -17,7 +17,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        // Rôles
+        
         $roles = [];
         foreach (['Admin', 'Trésorier', 'Secrétaire', 'Membre simple'] as $nom) {
             $role = (new Role())->setNom($nom);
@@ -25,7 +25,7 @@ class AppFixtures extends Fixture
             $roles[$nom] = $role;
         }
 
-        // Types de campagne
+       
         $types = [];
         foreach (['Épargne', 'Tontine'] as $nom) {
             $type = (new TypeCampagne())->setNom($nom);
@@ -33,7 +33,7 @@ class AppFixtures extends Fixture
             $types[] = $type;
         }
 
-        // Groupements
+        
         $groupements = [];
         foreach (['Groupement Teranga', 'Groupement Yaakaar'] as $nom) {
             $groupement = (new Groupement())->setNom($nom);
@@ -41,7 +41,7 @@ class AppFixtures extends Fixture
             $groupements[] = $groupement;
         }
 
-        // Membres : 6 par groupement
+       
         $noms = [
             'Awa Ndiaye', 'Fatou Diop', 'Aminata Sow', 'Mariama Ba', 'Khady Fall', 'Aïssatou Sarr',
             'Ndèye Gueye', 'Rokhaya Diouf', 'Coumba Faye', 'Sokhna Mbaye', 'Dieynaba Thiam', 'Adama Seck',
