@@ -97,7 +97,8 @@
         "dienepapeousmane:migration": [
             "@php bin/console make:migration --no-interaction",
             "@php bin/console doctrine:migrations:migrate --no-interaction"
-        ]
+        ],
+        "dienepapeousmane:fixtures": "@php bin/console doctrine:fixtures:load --no-interaction"
     },
     "conflict": {
         "symfony/symfony": "*"
